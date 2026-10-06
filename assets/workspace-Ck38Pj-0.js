@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/tutorFem-B9SSXzTv.js","assets/aiAgent-VyVLEEqV.js","assets/aiAgent-BhY8c8nT.css","assets/__vite-browser-external-D7Ct-6yo.js"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/tutorFem-BE75wBjD.js","assets/aiAgent-VyVLEEqV.js","assets/aiAgent-BhY8c8nT.css","assets/__vite-browser-external-D7Ct-6yo.js"])))=>i.map(i=>d[i]);
 import { d as wt, a as kt, g as Hg, m as rn, t as ph, b as Uf, s as bp, p as MM, B as Kt, F as Vf, L as yn, c as Vt, j as od, v as cn, G as Qr, V as yt, e as IM, f as pn, C as ad, h as B0, S as sd, i as id, k as Vs, l as Xg, n as AM, P as Gg, o as Gm, q as fh, r as hh, H as Ug, u as Vg, w as gM, M as en, x as Np, D as xs, y as An, A as jg, z as Eh, E as g0, I as Gn, J as qg, K as Jg, N as bM, O as jf, _ as qo, Q as ul, R as wo, T as io, U as Wg, W as wa, X as qf, Y as NM, Z as Sh, $ as la, a0 as TM, a1 as Zg, a2 as Kg, a3 as Tp, a4 as Qg, a5 as Mh, a6 as Ih, a7 as Ah, a8 as Um, a9 as eb, aa as tb, ab as nb, ac as ob, ad as gh, ae as xM, af as ab, ag as sb, ah as ib, ai as rb, aj as rd, ak as lb, al as Jf, am as Wf, an as yM, ao as cb, ap as db, aq as mb, __tla as __tla_0 } from "./aiAgent-VyVLEEqV.js";
 import { _ as ub } from "./__vite-browser-external-D7Ct-6yo.js";
 let Dn, FE, RI, o6, Sm, TF, a6;
@@ -24320,7 +24320,7 @@ Ac = dec(0.5*(L1c + L2c)*Bd, 4)
 #: Hasta e/L = 1/6 el problema es lineal y todo coincide; m\xE1s all\xE1, el FEM sigue a la f\xF3rmula del tri\xE1ngulo con el borde levantado. Hekatan y SAP2000 quedan a menos de 0.06 % (lo que queda es la tolerancia de convergencia de SAP2000, 1e-4).
 `;
   _I = (...e) => {
-    qo(() => import("./tutorFem-B9SSXzTv.js").then(async (m) => {
+    qo(() => import("./tutorFem-BE75wBjD.js").then(async (m) => {
       await m.__tla;
       return m;
     }), __vite__mapDeps([0,1,2,3])).then((t) => t.herramientasZapata(...e));
@@ -82295,7 +82295,7 @@ ${a} va a tardar ~${Math.round(t)} s y la p\xE1gina queda sin responder mientras
         l.grupo !== r && (r = l.grupo, s += `<tr class="grp"><td colspan="3">${r.toUpperCase()}</td></tr>`);
         const [m, p] = C3(l.demanda, l.tipo), [u] = C3(l.capacidad, l.tipo), d = l.ratio == null ? '<span class="na">N/A</span>' : l.ratio <= 1 + 1e-9 ? '<span class="ok">OK</span>' : '<span class="mal">NO CUMPLE</span>', h = l.ratio == null ? 0 : Math.min(100, l.ratio * 100), E = l.ratio == null || l.tipo === "ninguno" ? "" : `<div class="dc">${_3(m)} / ${_3(u)} ${p}</div>`;
         s += `<tr class="f" data-i="${c}"><td>${t0.has(l.que) ? "\u25BE" : "\u25B8"} ${l.que}${E}<div class="barra"><i style="width:${h}%;background:${nl(l.ratio)}"></i></div></td><td class="r" style="color:${nl(l.ratio)}">${l.ratio == null ? "\u2014" : l.ratio.toFixed(2)}</td><td>${d}</td></tr>`, t0.has(l.que) && (s += `<tr class="det"><td colspan="3"><span class="norma">\u{1F4D8} ${l.norma}</span><br>${l.formula}${l.nota ? `<br><span class="nota">\u24D8 ${l.nota}</span>` : ""}</td></tr>`);
-      }), s += "</table>", s += `<div class="mapas"><div>Soldadura: ratio a lo largo del per\xEDmetro${JR(e.sold, e.ratioSold, e.ax, e.ay)}</div><div>Pernos: ratio de cada perno${WR(e.pernos, e.ratioPernos, e.Lx, e.Ly, e.Tb, Qi)}</div></div>`, s += `<div class="pie">${e.titulo} \xB7 Cargas MAYORADAS (LRFD). Fuerzas por elementos finitos (motor de Struct: contacto solo compresi\xF3n + pernos solo tracci\xF3n); capacidades: AISC 360-22, AISC DG1 3.\xAA ed., ACI 318-19. Pulse una fila para ver la f\xF3rmula y el art\xEDculo. Verde \u2264 0.8 \xB7 naranja \u2264 1 \xB7 rojo > 1.</div>`;
+      }), s += "</table>", s += `<div class="mapas"><div>Soldadura: ratio a lo largo del per\xEDmetro${JR(e.sold, e.ratioSold, e.ax, e.ay)}</div><div>Pernos: ratio de cada perno${WR(e.pernos, e.ratioPernos, e.Lx, e.Ly, e.Tb, Qi)}</div></div>`, s += `<div class="pie">${e.titulo} \xB7 Cargas MAYORADAS (LRFD). Fuerzas por elementos finitos (motor de Struct: contacto solo compresi\xF3n + pernos solo tracci\xF3n); capacidades: AISC 360-22, AISC DG1 3.\xAA ed., ACI 318-19. Pulse una fila para ver la f\xF3rmula y el art\xEDculo. Verde \u2264 0.8 \xB7 naranja \u2264 1 \xB7 rojo > 1.<br>Orificios, arandelas y tuercas: SOLO dibujo; en el c\xE1lculo cada perno se une al nudo del centro de su orificio (el mismo modelo de Abaqus, la hoja LISP 144/145 e IDEA k2fem64).</div>`;
     }
     t.innerHTML = s, t.querySelectorAll("button[data-u]").forEach((r) => r.onclick = () => {
       Qi = r.dataset.u;
