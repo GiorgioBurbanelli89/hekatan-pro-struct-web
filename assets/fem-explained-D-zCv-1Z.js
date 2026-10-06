@@ -1,4 +1,4 @@
-import { aj as pt, ak as mt, L as Z, f as xt, V as ut, B as ht, Y as bt, c as gt, a5 as _t, a3 as Q, a9 as yt, g as vt, a1 as N, a2 as $t, v as M, d as wt, a as zt, ai as Mt, am as Et, __tla as __tla_0 } from "./aiAgent-vWrcGeUH.js";
+import { al as pt, am as mt, L as Z, f as xt, V as ut, B as ht, Y as bt, c as gt, a7 as _t, a5 as Q, ab as yt, g as vt, a3 as N, a4 as $t, v as M, d as wt, a as zt, ak as Mt, ao as Et, __tla as __tla_0 } from "./aiAgent-VyVLEEqV.js";
 Promise.all([
   (() => {
     try {
@@ -31,12 +31,12 @@ Promise.all([
       const u = f.intersectObjects(x, false);
       if (u.length > 0) {
         const h = u[0].point, _ = l.val, $ = i.val;
-        let E = -1, D = 1 / 0;
+        let E = -1, F = 1 / 0;
         for (let L = 0; L < $.length; L++) {
           const w = _[$[L][0]], v = _[$[L][1]];
           if (!w || !v) continue;
           const A = new ut((w[0] + v[0]) / 2, (w[1] + v[1]) / 2, (w[2] + v[2]) / 2), q = h.distanceTo(A);
-          q < D && (D = q, E = L);
+          q < F && (F = q, E = L);
         }
         E >= 0 && (o(E, _, $, t), r.val = E);
       }
@@ -76,7 +76,7 @@ Promise.all([
         <div><strong>Coords:</strong> (${p[0].map((n) => n.toFixed(1)).join(", ")}) \u2192 (${p[1].map((n) => n.toFixed(1)).join(", ")})</div>
         <div><strong>Length:</strong> <span class="value">${l.length.toFixed(2)}</span></div>
         <div><strong>Properties:</strong>
-          E=${j(f.E)}, A=${j(f.A)}, Iz=${j(f.Iz)}, Iy=${j(f.Iy)}, G=${j(f.G)}, J=${j(f.J)}
+          E=${k(f.E)}, A=${k(f.A)}, Iz=${k(f.Iz)}, Iy=${k(f.Iy)}, G=${k(f.G)}, J=${k(f.J)}
         </div>
       </div>
     </div>
@@ -105,7 +105,7 @@ Promise.all([
       for (const r of t.values) i += `<div class="value">${W(r)}</div>`;
       i += "</div>";
     }
-    return t.matrix && (i += jt(t.matrix, t.matrixLabel ?? "", t.matrixSize ?? "")), t.extraHtml && (i += t.extraHtml), i += "</div></div>", i;
+    return t.matrix && (i += kt(t.matrix, t.matrixLabel ?? "", t.matrixSize ?? "")), t.extraHtml && (i += t.extraHtml), i += "</div></div>", i;
   }
   function W(t) {
     try {
@@ -117,7 +117,7 @@ Promise.all([
     }
     return `<code>${t}</code>`;
   }
-  function jt(t, l, i) {
+  function kt(t, l, i) {
     var _a;
     const r = t.length, p = ((_a = t[0]) == null ? void 0 : _a.length) ?? 0, f = 12, m = Math.min(r, f), n = Math.min(p, f);
     let o = '<div style="margin:8px 0">';
@@ -128,7 +128,7 @@ Promise.all([
       o += "<tr>", o += `<td style="color:#00d4ff;font-size:9px;white-space:nowrap">${tt(e)}</td>`;
       for (let c = 0; c < n; c++) {
         const s = t[e][c], d = Math.abs(s) < 1e-10;
-        o += `<td class="${d ? "zero" : e === c ? "highlight" : ""}">${d ? "0" : kt(s)}</td>`;
+        o += `<td class="${d ? "zero" : e === c ? "highlight" : ""}">${d ? "0" : Dt(s)}</td>`;
       }
       o += "</tr>";
     }
@@ -145,18 +145,18 @@ Promise.all([
       "rz"
     ][i]}${l === 0 ? "i" : "j"}`;
   }
-  function kt(t) {
+  function Dt(t) {
     return Math.abs(t) >= 1e6 || Math.abs(t) < 0.01 && t !== 0 ? t.toExponential(1) : Math.abs(t) >= 100 ? t.toFixed(0) : Math.abs(t) >= 1 ? t.toFixed(2) : t.toFixed(4);
   }
-  function j(t) {
+  function k(t) {
     return Math.abs(t) >= 1e6 ? t.toExponential(2) : t === 0 ? "0" : t.toFixed(2);
   }
-  function Dt(t, l, i, r, p, f, m) {
+  function Ft(t, l, i, r, p, f, m) {
     var _a, _b, _c, _d, _e, _f;
     const n = i[t], o = l[n[0]], e = l[n[1]], c = [
       o,
       e
-    ], s = _t(Q(o, e)), d = ((_a = r.elasticities) == null ? void 0 : _a.get(t)) ?? 0, b = ((_b = r.areas) == null ? void 0 : _b.get(t)) ?? 0, x = ((_c = r.momentsOfInertiaZ) == null ? void 0 : _c.get(t)) ?? 0, u = ((_d = r.momentsOfInertiaY) == null ? void 0 : _d.get(t)) ?? 0, h = ((_e = r.shearModuli) == null ? void 0 : _e.get(t)) ?? 0, _ = ((_f = r.torsionalConstants) == null ? void 0 : _f.get(t)) ?? 0, $ = d * b / s, E = d * x / s ** 3, D = d * u / s ** 3, L = h * _ / s, w = yt(c, r, t), v = vt(c), A = N($t(v), N(w, v)), q = Q(e, o), X = q[0] / s, U = q[1] / s, G = q[2] / s, rt = Math.sqrt(X ** 2 + U ** 2), V = n[0] * 6, H = n[1] * 6, S = [];
+    ], s = _t(Q(o, e)), d = ((_a = r.elasticities) == null ? void 0 : _a.get(t)) ?? 0, b = ((_b = r.areas) == null ? void 0 : _b.get(t)) ?? 0, x = ((_c = r.momentsOfInertiaZ) == null ? void 0 : _c.get(t)) ?? 0, u = ((_d = r.momentsOfInertiaY) == null ? void 0 : _d.get(t)) ?? 0, h = ((_e = r.shearModuli) == null ? void 0 : _e.get(t)) ?? 0, _ = ((_f = r.torsionalConstants) == null ? void 0 : _f.get(t)) ?? 0, $ = d * b / s, E = d * x / s ** 3, F = d * u / s ** 3, L = h * _ / s, w = yt(c, r, t), v = vt(c), A = N($t(v), N(w, v)), q = Q(e, o), X = q[0] / s, U = q[1] / s, G = q[2] / s, rt = Math.sqrt(X ** 2 + U ** 2), V = n[0] * 6, H = n[1] * 6, S = [];
     if (f == null ? void 0 : f.deformations) {
       const z = f.deformations.get(n[0]) ?? [
         0,
@@ -165,7 +165,7 @@ Promise.all([
         0,
         0,
         0
-      ], F = f.deformations.get(n[1]) ?? [
+      ], j = f.deformations.get(n[1]) ?? [
         0,
         0,
         0,
@@ -173,7 +173,7 @@ Promise.all([
         0,
         0
       ];
-      S.push(...z, ...F);
+      S.push(...z, ...j);
     }
     const ct = S.length === 12 ? N(v, S) : Array(12).fill(0), g = S.length === 12 ? N(w, ct) : Array(12).fill(0), y = [];
     y.push({
@@ -202,7 +202,7 @@ Promise.all([
         "N_1(\\xi) = 1 - \\xi, \\quad N_2(\\xi) = \\xi"
       ],
       values: [],
-      extraHtml: Ft()
+      extraHtml: jt()
     }), y.push({
       title: "Step 3: Strain-Displacement Relations (B Matrix)",
       description: "The B matrix relates nodal displacements to strains. For each DOF type:",
@@ -236,9 +236,9 @@ Promise.all([
         "\\text{Key terms:}",
         `K[0,0] = \\frac{EA}{L} = ${a($)}`,
         `K[1,1] = \\frac{12EI_z}{L^3} = ${a(12 * E)}`,
-        `K[2,2] = \\frac{12EI_y}{L^3} = ${a(12 * D)}`,
+        `K[2,2] = \\frac{12EI_y}{L^3} = ${a(12 * F)}`,
         `K[3,3] = \\frac{GJ}{L} = ${a(L)}`,
-        `K[4,4] = \\frac{4EI_y}{L} = ${a(4 * D * s ** 2)}`,
+        `K[4,4] = \\frac{4EI_y}{L} = ${a(4 * F * s ** 2)}`,
         `K[5,5] = \\frac{4EI_z}{L} = ${a(4 * E * s ** 2)}`
       ],
       values: [],
@@ -273,9 +273,9 @@ Promise.all([
     });
     const dt = Array.from({
       length: 6
-    }, (z, F) => V + F), ft = Array.from({
+    }, (z, j) => V + j), ft = Array.from({
       length: 6
-    }, (z, F) => H + F);
+    }, (z, j) => H + j);
     return y.push({
       title: "Step 8: Assembly into Global System",
       description: `Element ${t} connects node ${n[0]} (DOFs ${V}-${V + 5}) to node ${n[1]} (DOFs ${H}-${H + 5}).`,
@@ -339,7 +339,7 @@ Promise.all([
   function a(t, l = 2) {
     return Math.abs(t) < 1e-10 ? "0" : Math.abs(t) > 1e6 || Math.abs(t) < 0.01 && t !== 0 ? t.toExponential(l) : t.toFixed(l);
   }
-  function Ft(t) {
+  function jt(t) {
     const n = [
       {
         name: "N1",
@@ -422,7 +422,7 @@ Promise.all([
       0,
       R
     ]
-  ]), k = M.state([
+  ]), D = M.state([
     [
       0,
       1
@@ -521,7 +521,7 @@ Promise.all([
     ])
   }), T = M.state({}), C = M.state({});
   M.derive(() => {
-    const t = B.val, l = k.val, i = Y.val, r = O.val;
+    const t = B.val, l = D.val, i = Y.val, r = O.val;
     !t.length || !l.length || (T.val = wt(t, l, i, r), C.val = zt(t, l, r, T.val));
   });
   const I = document.createElement("div");
@@ -537,11 +537,11 @@ Promise.all([
   M.derive(() => {
     const t = K.val;
     if (t < 0) return;
-    const l = B.val, i = k.val, r = O.val, p = Y.val, f = T.val;
+    const l = B.val, i = D.val, r = O.val, p = Y.val, f = T.val;
     if (C.val, !l.length || !i.length || !(f == null ? void 0 : f.deformations)) return;
     const m = i[t].map((o) => l[o]);
     if (m.length === 2) {
-      const o = Dt(t, l, i, r, p, f);
+      const o = Ft(t, l, i, r, p, f);
       St(I, o, t, i[t], m);
     }
   });
@@ -629,7 +629,7 @@ Promise.all([
   const lt = Mt({
     mesh: {
       nodes: B,
-      elements: k,
+      elements: D,
       nodeInputs: Y,
       elementInputs: O,
       deformOutputs: T,
@@ -647,7 +647,7 @@ Promise.all([
   setTimeout(() => {
     const t = document.getElementById("element-buttons");
     if (t) {
-      const i = k.val;
+      const i = D.val;
       for (let r = 0; r < i.length; r++) {
         const p = document.createElement("button");
         p.textContent = `Elem ${r}`, p.style.cssText = "background:#0f3460;color:#00d4ff;border:1px solid #00d4ff;padding:4px 12px;border-radius:4px;cursor:pointer;font-size:12px", p.addEventListener("click", () => {
@@ -656,12 +656,12 @@ Promise.all([
       }
     }
     const l = lt.__ctx;
-    l && Lt(l, B, k, K);
+    l && Lt(l, B, D, K);
   }, 500);
   window._fem = {
     selectedElement: K,
     nodes: B,
-    elements: k,
+    elements: D,
     elementInputs: O,
     deformOutputs: T,
     analyzeOutputs: C
